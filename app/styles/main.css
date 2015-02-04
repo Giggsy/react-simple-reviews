@@ -1,0 +1,213 @@
+html {
+  height: 100%;
+}
+ body {
+    background: #white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    height: 100%;
+    font-weight: 100;
+}
+
+.hero-unit {
+  width: 100%;
+  height: 40vh;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.full {
+  height: 100vh;
+}
+
+.review-hero-unit {
+  width: 100%;
+  height: 100vh;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-unit h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.rating {
+  color: white;
+  font-size: 28vh;
+  vertical-align: baseline;
+}
+
+.content-enter {
+  transition-duration: .3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  transform: translate3d(0,100%,0);
+  z-index: 10000;
+}
+
+.content-enter.content-enter-active {
+  transform: translate3d(0,0,0);
+}
+
+.content-leave {
+  transition-duration: .3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.content-leave.content-leave-active {
+  transform: translate3d(0,-15%,0);
+}
+
+.text-input {
+  color: black;
+  width: 80%;
+  /*font-size: 3em;*/
+  padding: 10px;
+  border: 1px inset gray;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+.list__container {
+  list-style: none;
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 2px;
+}
+
+.list__item {
+  width: 90%;
+  height: 20vh;
+  margin-top: 23px;
+  border-bottom: 1px solid rgb(223, 223, 223);
+  padding-bottom: 23px;
+  display: inline-block;
+  text-align: left;
+}
+
+.title {
+  font-size: 40px;
+  position: relative;
+  margin-left: 50px;
+  top: 25%;
+  display: inline-block;
+  width: 75vw;
+  color: black;
+}
+
+.list__item:hover {
+  cursor: pointer;
+}
+
+.list__item > a {
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+.thumbnail {
+  border-radius: 50%; 
+  height: 20vh;
+  float: right;
+}
+
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #76B738;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+/*http://projects.lukehaas.me/css-loaders/*/
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+}
+.loader {
+  text-indent: -9999em;
+  margin: 8em auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:after {
+  left: 1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #76B738;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #76B738;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #76B738;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #76B738;
+    height: 5em;
+  }
+}
+
+.example-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+}
